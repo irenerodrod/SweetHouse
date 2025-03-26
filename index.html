@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet House - Pastelería y Cafetería</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="webroot/media/SweetHouse.png" alt="Sweet House Logo">
+        </div>
+        <!-- <h1>Sweet House</h1> -->
+        <p>Tu rincón dulce en León, España</p>
+    </header>
+
+    <nav>
+        <label for="inicio"><a>Inicio</a></label>
+        <label for="menu"><a>Menú</a></label>
+        <label for="nosotros"><a>Nosotros</a></label>
+        <label for="contacto"><a>Contacto</a></label>
+        <label for="ubicacion"><a>Ubicación y pedidos</a></label>
+    </nav>
+
+    <input type="radio" name="seccion" id="inicio" checked hidden>
+    <input type="radio" name="seccion" id="menu" hidden>
+    <input type="radio" name="seccion" id="nosotros" hidden>
+    <input type="radio" name="seccion" id="contacto" hidden>
+    <input type="radio" name="seccion" id="ubicacion" hidden>
+
+    <section class="contenido" id="contenido-inicio">
+        <h2>Bienvenidos a Sweet House</h2>
+        <div class="inicio-container">
+            <img src="/webroot/media/Establecimiento.png" alt="Sweet House">
+            <div class="descripcion">
+                <p>Disfruta de los mejores dulces y café en un ambiente acogedor en el corazón de León (España).
+                    Bienvenido a Sweet House, el rincón más dulce de León. Especializados en galletas y postres, hacemos
+                    que cada hogar sea un dulce hogar.</p>
+                <p>👩🏻‍🍳 Nuestras cookies son 100% artesanales, elaboradas con cariño y los mejores ingredientes para
+                    que disfrutes de un sabor único.</p>
+                <p>📦 ¿No puedes pasar a visitarnos? Aprovecha nuestro servicio <strong>take away</strong> o haz tu
+                    pedido desde la comodidad de tu casa a través de <strong>Glovo</strong> y <strong>Uber
+                        Eats</strong>.</p>
+                <p>📍 Nos encontrarás en <strong>Av. Padre Isla 7, León</strong>. Ven y endulza tu día con nosotros. 🍪
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenido" id="contenido-menu">
+        <h2>Nuestro Menú</h2>
+        <div class="filtros">
+            <button onclick="filtrar('todos')">Todos</button>
+            <button onclick="filtrar('galletas')">Galletas</button>
+            <button onclick="filtrar('pasteles')">Pasteles</button>
+            <button onclick="filtrar('madalenas')">Madalenas</button>
+            <button onclick="filtrar('cafe_con')">Café con Galleta</button>
+            <button onclick="filtrar('cafe_sin')">Café sin Galleta</button>
+        </div>
+        <div class="productos">
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieChurrin.avif" alt="Galleta de churrín">
+                <div class="producto-nombre">Galleta de churrín</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieFerreroCrunch.jpg" alt="Galleta Ferrero Crunch">
+                <div class="producto-nombre">Galleta Ferrero Crunch</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieKinderWhite.avif" alt="Cookie Kinder White">
+                <div class="producto-nombre">Cookie Kinder White</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieLaDeLeón.avif" alt="Cookie la de León">
+                <div class="producto-nombre">Cookie la de León</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieLimaCremosa.jpg" alt="Cookie Lima Cremosa">
+                <div class="producto-nombre">Cookie Lima Cremosa</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieLotusSupremo.avif" alt="Cookie Lotus Supremo">
+                <div class="producto-nombre">Cookie Lotus Supremo</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieNYAvena.avif" alt="Cookie NY Avena">
+                <div class="producto-nombre">Cookie NY Avena</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieNYChicaFresa.avif" alt="Cookie NY Chica Fresa">
+                <div class="producto-nombre">Cookie NY Chica Fresa</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieOreo.avif" alt="Cookie Oreo">
+                <div class="producto-nombre">Cookie Oreo</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookiePistachon.avif" alt="Cookie Pistachón">
+                <div class="producto-nombre">Cookie Pistachón</div>
+            </div>
+            <div class="producto galletas">
+                <img src="/webroot/media/cookies/cookieRedKiss.avif" alt="Cookie Red Kiss">
+                <div class="producto-nombre">Cookie Red Kiss</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenido" id="contenido-nosotros">
+        <div class="nosotros-container">
+            <div class="image-container">
+                <img src="/webroot/media/EstablecimientoInterior.png" alt="Sweet House">
+            </div>
+            <div class="descripcion">
+                <h2>Sobre Nosotros</h2>
+                <p>En pleno corazón de León, Sweet House abre sus puertas como la primera cafetería en traer las famosas
+                    Crumbl Cookies a la ciudad. Ubicada en el número 7 de la emblemática Avenida Padre Isla, a tan solo
+                    unos
+                    pasos de Santo Domingo, nuestra cafetería nace con la ambición de convertirse en un referente dentro
+                    del
+                    mundo de la repostería artesanal. Impulsada por dos jóvenes emprendedores apasionados por los
+                    sabores
+                    modernos y auténticos, Sweet House combina creatividad y tradición.</p>
+                <p>Aquí podrás disfrutar de nuestras exclusivas Crumbl Cookies con sabores irresistibles como Lotus
+                    Supremo,
+                    Red Kiss, Lima Cremosa, Chips de Siempre y Ferrero, que hasta ahora eran imposibles de conseguir en
+                    León. Y no solo eso, también ofrecemos una amplia variedad de productos caseros que puedes disfrutar
+                    en
+                    nuestro acogedor local o llevar contigo en una elegante cajita.</p>
+                <p>Ya sea para endulzar tu día o compartir un momento especial, en Sweet House creamos experiencias
+                    únicas,
+                    combinando calidad, innovación y un toque de amor en cada receta.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contenido" id="contenido-contacto">
+        <h2>Contacto</h2>
+        <p>Encuéntranos en León o llámanos al 687 20 32 72</p>
+
+        <div class="contacto-container">
+            <!-- Formulario de contacto -->
+            <div class="form-container">
+                <form action="#" method="POST" class="form-contacto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="contenido" id="contenido-ubicacion">
+        <div class="ubicacion-pedidos-container">
+            <!-- Div para Ubicación -->
+            <div class="mapa-container">
+                <h2>Ubicación</h2>
+                <p>Estamos en el centro de León, ¡ven a visitarnos!</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.9262950049356!2d-5.5755391232221525!3d42.599307271171526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd379ba3b80bf525%3A0x620e34dffdde8c98!2sSweet%20House!5e0!3m2!1ses!2ses!4v1742982088485!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Div para Haz tu pedido -->
+            <div class="pedidos-container">
+                <h2>Haz tu pedido</h2>
+                <p>Haz tu pedido a través de nuestras aplicaciones asociadas:</p>
+                <div class="pedidos">
+                    <a href="https://glovoapp.com/es/es/leon/sweet-house-leon/" target="_blank">
+                        <img src="webroot/media/delivery/glovoLogo.png" alt="Glovo" class="pedido-logo">
+                    </a>
+                    <a href="https://www.ubereats.com/es/store/sweet-house-leon/jiJqAkEAW9uArzG2Hjv4ow?msockid=1e2641aac7876d4120045431c67e6c77"
+                        target="_blank">
+                        <img src="webroot/media/delivery/UberEatsLogo.png" alt="Uber Eats" class="pedido-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function filtrar(categoria) {
+            let productos = document.querySelectorAll(".producto");
+
+            productos.forEach(producto => {
+                if (categoria === 'todos' || producto.classList.contains(categoria)) {
+                    producto.style.display = "block";
+                } else {
+                    producto.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+
+<footer>
+    <p>2024-25 &#169; Todos los derechos reservados. </p>
+    <p>Desarrollado por <a href="https://portfolioirene.vercel.app/">Irene Rodríguez Rodríguez</a>	♡</p>
+</footer>
+
+</html>

@@ -1,0 +1,348 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    text-align: center;
+}
+
+/* Header estilizado */
+/* Header mejorado con color de fondo ajustado */
+header {
+    background-color: #f2a1b3; /* Un tono más suave y claro de rosa */
+    color: #ffffff;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 4px solid #f8c6d8; /* Línea de separación suave */
+}
+
+/* Estilo para el logo */
+.logo img {
+    max-width: 120px; /* Aumentamos un poco el tamaño del logo */
+    height: auto;
+    filter: brightness(0) invert(1); /* Invertir colores del logo si es blanco o muy claro */
+}
+
+/* Estilo para el párrafo debajo del h1 */
+header p {
+    font-size: 16px;
+    color: #9d4061; /* Un tono más oscuro que contrasta con el fondo */
+    margin-top: 8px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Estilo para el h1 */
+header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* Menú de navegación mejorado */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #9dd6c2;
+    padding: 15px;
+    border-bottom: 2px solid #8abfa7;
+}
+
+nav label {
+    margin: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav label:hover {
+    color: #e2a3b7;
+}
+
+/* Contenedor principal del contenido */
+.inicio-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    gap: 20px; /* Espaciado entre la imagen y el texto */
+    margin-top: 20px;
+}
+
+/* Estilo para la imagen */
+.inicio-container img{
+    max-width: 300px; /* Tamaño máximo de la imagen */
+    height: auto; /* Mantiene proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Contenedor del texto */
+.descripcion {
+    flex: 1; /* Ocupa todo el espacio disponible restante */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Contenedor principal */
+.nosotros-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Imagen y texto alineados */
+    gap: 30px; /* Espaciado entre la imagen y el texto */
+    padding: 20px; /* Margen interno */
+    background-color: #f9f9f9; /* Fondo sutil */
+}
+
+/* Estilo para la imagen */
+.nosotros-container img {
+    max-width: 300px; /* Tamaño máximo */
+    height: auto; /* Mantener proporción */
+   
+}
+
+/* Contenedor del texto */
+.descripcion {
+    flex: 1; /* Ocupa todo el espacio restante */
+    text-align: left; /* Texto alineado a la izquierda */
+    color: #333; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Estilo del encabezado */
+h2 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px;
+    color: #f2a1b3;
+}
+
+
+/* Sección de contenido */
+.contenido {
+    display: none;
+    padding: 20px;
+}
+
+/* Mostrar contenido basado en la selección del menú */
+#inicio:checked ~ #contenido-inicio,
+#menu:checked ~ #contenido-menu,
+#nosotros:checked ~ #contenido-nosotros,
+#contacto:checked ~ #contenido-contacto,
+#ubicacion:checked ~ #contenido-ubicacion {
+    display: block;
+}
+
+/* Estilo para los filtros de productos */
+.filtros button {
+    background-color: #f8c6d8;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.filtros button:hover {
+    background-color: #e2a3b7;
+}
+
+/* Contenedor de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.producto {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: scale(1.05); /* Efecto al pasar el ratón */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.producto img:hover {
+    opacity: 0.9; /* Efecto de opacidad al pasar el ratón */
+}
+
+.producto-nombre {
+    background-color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f2a1b3;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.producto-nombre:hover {
+    color: #e2a3b7;
+}
+
+/* Estilo para el contenedor de contacto */
+.contacto-container {
+    display: flex;
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 20px; /* Espaciado entre el h y el form */
+    margin-top: 20px;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    width: 100%; /* Ocupa todo el espacio disponible */
+    max-width: 500px; /* Limita el ancho del formulario */
+    display: flex;
+    flex-direction: column; /* Mantiene los elementos del formulario organizados en columna */
+    align-items: center; /* Centra el contenido del formulario */
+}
+
+/* Estilos para el formulario de contacto */
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-contacto label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-contacto button {
+    padding: 10px;
+    background-color: #f8c6d8;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-contacto button:hover {
+    background-color: #e2a3b7;
+}
+
+/* Contenedor general para mapa y pedidos */
+.ubicacion-pedidos-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye los contenedores de forma equilibrada */
+    align-items: flex-start; /* Alinea la parte superior de los contenedores */
+    gap: 30px; /* Espaciado entre los contenedores */
+    margin-top: 20px;
+}
+
+/* Estilo para el div del mapa */
+.mapa-container,
+.pedidos-container {
+    flex: 1; /* Ambos divs tendrán la misma anchura */
+    text-align: center; /* Centra el contenido del texto */
+    padding: 20px;
+    background-color: #f8f8f8; /* Fondo opcional */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    height: auto; /* Ajustable según el contenido */
+}
+
+/* Estilo para los encabezados */
+.mapa-container h2,
+.pedidos-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #f2a1b3;
+}
+
+/* Estilo para el iframe del mapa */
+iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Contenedor para los logos de pedidos */
+.pedidos {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los logos */
+    margin-top: 15px;
+}
+
+.pedido-logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pedido-logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el footer */
+footer {
+    position: fixed; /* Hace que el footer esté fijo */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f2a1b3; /* Mismo color que el header */
+    color: #ffffff; /* Texto blanco como en el header */
+    padding: 10px 20px; /* Espaciado similar al header */
+    text-align: center; /* Texto centrado */
+    border-top: 4px solid #f8c6d8; /* Línea de separación, igual al header */
+    font-size: 14px; /* Tamaño de fuente ajustado */
+    z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+/* Footer link o contenido interactivo */
+footer a {
+    color: #9d4061; /* Color contraste para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
+
